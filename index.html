@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- materialize -->
-
-    <!-- bootstrap -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"
     />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -43,9 +46,16 @@
 
       <div class="section-1-c d-flex justify-content-center">
         <img class="videobg-img" src="./assets/videoBg.jpg" alt="" />
-        <img class="play-icon" src="./assets/play icon.svg" />
+        <img
+          class="play-icon"
+          src="./assets/play icon.svg"
+          data-toggle="modal"
+          data-target="#vidModal"
+        />
         <div
           class="mobile-video d-flex align-items-center justify-content-between"
+          data-toggle="modal"
+          data-target="#vidModal"
         >
           <img class="play-icon-mobile" src="./assets/play icon.svg" />
           <p class="text-white">Watch Video</p>
@@ -322,14 +332,14 @@
                   data-target="#collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne"
-                  >－</span
+                  >＋</span
                 >
               </p>
             </div>
 
             <div
               id="collapseOne"
-              class="collapse show"
+              class="collapse"
               aria-labelledby="headingOne"
               data-parent="#accordion"
             >
@@ -361,14 +371,14 @@
                   data-target="#collapseTwo"
                   aria-expanded="true"
                   aria-controls="collapseTwo"
-                  >－</span
+                  >＋</span
                 >
               </p>
             </div>
 
             <div
               id="collapseTwo"
-              class="collapse show"
+              class="collapse"
               aria-labelledby="headingOne"
               data-parent="#accordion"
             >
@@ -400,14 +410,14 @@
                   data-target="#collapseThree"
                   aria-expanded="true"
                   aria-controls="collapseThree"
-                  >－</span
+                  >＋</span
                 >
               </p>
             </div>
 
             <div
               id="collapseThree"
-              class="collapse show"
+              class="collapse"
               aria-labelledby="headingOne"
               data-parent="#accordion"
             >
@@ -445,14 +455,27 @@
     </div>
     <p class="p-4 text-center Header">Footer</p>
 
-    <script>
-      let btns = document.getElementsByClassName("collapse-btn");
-      for (let i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", () => {
-          if (btns[i].textContent === "＋") btns[i].textContent = "－";
-          else if (btns[i].textContent === "－") btns[i].textContent = "＋";
-        });
-      }
-    </script>
+    <!-- video modal -->
+    <div class="modal fade" id="vidModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              src="https://www.youtube.com/embed/OvjVwCUIJag?autoplay=1&rel=0"
+              width="100%"
+              height="auto"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
