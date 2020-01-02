@@ -508,11 +508,26 @@
               height="485px"
               frameborder="0"
               allowfullscreen
+              id="mobile-frame"
             ></iframe>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      $("#vidModal").on("show.bs.modal", function(e) {
+        document
+          .getElementById("mobile-frame")
+          .setAttribute(
+            "src",
+            "https://www.youtube.com/embed/OvjVwCUIJag?rel=0"
+          );
+      });
+
+      $("#vidModal").on("hidden.bs.modal", function(e) {
+        document.getElementById("mobile-frame").setAttribute("src", "");
+      });
+    </script>
     <script src="./index.js"></script>
   </body>
 </html>
