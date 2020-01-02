@@ -71,6 +71,7 @@
 
 .product {
   border: 0.5px solid rgba(0, 0, 0, 0.05) !important;
+  margin-bottom: 1.25rem;
 }
 
 .feature {
