@@ -39,6 +39,9 @@
   position: absolute;
   top: 40%;
   cursor: pointer;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .section-1-bridge {
@@ -140,6 +143,18 @@
   font-size: 1.25rem;
 }
 
+.desktop-video {
+  height: 485px;
+  width: 615px;
+  background-image: url("./assets/videoBg.jpg");
+  border: 10px solid #6a6a6a;
+  border-radius: 10px;
+}
+
+.desktop-video iframe {
+  display: none;
+}
+
 .collapse .card-body {
   background-color: #f5f5f5;
 }
@@ -169,6 +184,10 @@
   .carousel-inner {
     width: 75% !important;
     margin: auto;
+  }
+
+  .desktop-video {
+    display: none;
   }
 
   .videobg-img,

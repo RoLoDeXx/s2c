@@ -45,13 +45,23 @@
       </div>
 
       <div class="section-1-c d-flex justify-content-center">
-        <img class="videobg-img" src="./assets/videoBg.jpg" alt="" />
-        <img
-          class="play-icon"
-          src="./assets/play icon.svg"
-          data-toggle="modal"
-          data-target="#vidModal"
-        />
+        <div class="desktop-video">
+          <iframe
+            src="https://www.youtube.com/embed/OvjVwCUIJag?autoplay=1&rel=0"
+            width="595px"
+            height="465px"
+            frameborder="0"
+            allowfullscreen
+            id="desktop-frame"
+          ></iframe>
+          <!-- <img class="videobg-img" src="./assets/videoBg.jpg" alt="" /> -->
+          <img
+            id="desktop-video-icon"
+            class="play-icon"
+            src="./assets/play icon.svg"
+            onClick="showVideo()"
+          />
+        </div>
         <div
           class="mobile-video d-flex align-items-center justify-content-between"
           data-toggle="modal"
@@ -468,7 +478,7 @@
             <iframe
               src="https://www.youtube.com/embed/OvjVwCUIJag?autoplay=1&rel=0"
               width="100%"
-              height="auto"
+              height="485px"
               frameborder="0"
               allowfullscreen
             ></iframe>

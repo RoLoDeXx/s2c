@@ -21,3 +21,8 @@ for (let i = 0; i < btns.length; i++) {
     }
   });
 }
+
+const showVideo = () => {
+  document.getElementById("desktop-video-icon").style.display = "none";
+  document.getElementById("desktop-frame").style.display = "block";
+};
