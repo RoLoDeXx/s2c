@@ -7,10 +7,9 @@
   font-size: 1.25rem;
 }
 
-.section-1 {
-  background-color: #2b7b81;
-  margin-left: 5rem;
-  margin-right: 5rem;
+.section-1,
+.section-4 {
+  background-color: #5d6996;
 }
 
 .company-logo img {
@@ -24,17 +23,22 @@
 }
 
 .section-1-c {
-  height: 25rem;
-  border: 10px solid #5f5f5f;
-  border-radius: 10px;
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
-  width: 35rem;
   margin-top: -4rem;
-  background-color: cornflowerblue;
-  max-width: 80%;
+}
+
+.videobg-img {
+  border: 10px solid #6a6a6a;
+  border-radius: 5px;
+}
+
+.play-icon {
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
 }
 
 .section-1-bridge {
@@ -111,27 +115,84 @@
   outline: none;
   background: #e25f54;
   color: white;
+  outline: none;
+}
+
+.mobile-video img,
+.mobile-video p {
+  display: none;
+}
+
+#accordion {
+  width: 65%;
+}
+
+.collapse-btn {
+  transition: 0.25s;
+}
+
+#accordion .card-header {
+  background-color: #ebebeb;
+  padding: 0 !important;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.collapse .card-body {
+  background-color: #f5f5f5;
 }
 
 @media only screen and (max-width: 768px) {
   .features-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .carousel-inner {
     width: 75% !important;
     margin: auto;
   }
+
+  .videobg-img,
+  .play-icon {
+    display: none;
+  }
+
+  .section-1-bridge {
+    margin-top: 10rem;
+  }
+
+  .mobile-video img,
+  .mobile-video p {
+    display: inline;
+  }
+
+  .mobile-video {
+    cursor: pointer;
+  }
+
+  .mobile-video p {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    margin-left: 5px;
+  }
+  .mobile-video img {
+    width: 2rem;
+  }
+  #accordion {
+    width: 95%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
-  .section-1 {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  .company-logo img {
+    display: inline;
+    margin: auto;
   }
 
   .section-1-a span {
